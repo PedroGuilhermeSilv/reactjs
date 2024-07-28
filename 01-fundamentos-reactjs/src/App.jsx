@@ -1,10 +1,30 @@
 
+import { Header } from "./components/Header"
+import {Posto} from "./Posto"
 
-function App() {
-
+import './global.css'
+import styles from './App.module.css'
+import { Sidebar } from "./components/Sidebar"
+export function App() {
+console.log(styles)
   return (
-    <h1> Hello World</h1>
+    <>
+    <Header />
+    <div className={styles.wrapper}>
+      <Sidebar />
+
+      <main>
+
+      <Posto author="Pedro Guilherme"
+      content="Aprendendo ReactJS"
+      />
+            <Posto author="Pedro ucas"
+      content="Aprendendo "
+      />
+        </main>
+    </div>
+    </>
   )
 }
 
-export default App
+

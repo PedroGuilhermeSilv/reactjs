@@ -6,3 +6,14 @@
 
 ### SSR (Server Side Rendering)
 - Renderização no lado do servidor significa que o conteúdo é gerado no servidor e enviado ao cliente como HTML completo, melhorando o desempenho e a SEO. SSR é útil para aplicativos que requerem renderização inicial rápida e melhor indexação pelos motores de busca.
+
+## Componetes.
+- São partes de codigos que podem ser reutilizados.
+- São funções que retornam html e de formato jsx
+
+## Propiedades
+- São informações que podemos passar para os componentes.
+
+## Css Modules
+- Geralmente trabalhamos o css com base no escopo do componente.
+#D0011
