@@ -15,6 +15,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: -2rem;
+    
 }
 .footer{
     border-top: 1px solid var(--gray-600);
@@ -31,11 +33,39 @@
     border: 1px solid var(--green-500);
     height: 50px;
     border-radius: 8px;
-    padding: 0 1.5rem;
     font-weight: bold;
     display: block;
     align-items: center;
     display: flex;
     color: var(--green-500);
     justify-content: center;
+    gap: 0.3rem;
+}
+
+.footer a:hover{
+    background: var(--green-500);
+    color: white;
+    transition: color 0.1s;
+}
+
+.avatar {
+    box-sizing: initial;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 3px;
+    border:  solid  4px var(--gray-800);
+    outline: solid 2px var(--green-500);
+
+}
+
+.profile strong {
+    margin-top: 1rem;
+    color: var(--gray-100);
+    line-height: 1.6;
+}
+
+.profile span {
+    color: var(--gray-400);
+    font-size: 0.875rem;
+    line-height: 1.6;
 }
