@@ -1,6 +1,6 @@
 
 import { Header } from "./components/Header"
-import {Posto} from "./Posto"
+import {Post} from "./components/Post"
 
 import './global.css'
 import styles from './App.module.css'
@@ -15,12 +15,8 @@ console.log(styles)
 
       <main>
 
-      <Posto author="Pedro Guilherme"
-      content="Aprendendo ReactJS"
-      />
-            <Posto author="Pedro ucas"
-      content="Aprendendo "
-      />
+      <Post />
+
         </main>
     </div>
     </>
