@@ -1,65 +1,42 @@
-import style from "./Post.module.css";
-import { Comment } from "./Comment.jsx";
-import { Avatar } from "./Avatar.jsx";
-import { format, formatDistanceToNow } from "date-fns";
-import { ptBR } from "date-fns/locale";
+import style from './Post.module.css'; 
 
-export function Post({ author, publishedAt, content }) {
-  const publishedDateFormated = format(
-    publishedAt,
-    "d 'de' LLLL 'às' HH:mm'h'",
-    { locale: ptBR },
-  );
-  const publishedDateRelativeToNow = formatDistanceToNow(publishedAt, {
-    locale: ptBR,
-    addSuffix: true,
-  });
-  return (
-    <article className={style.post}>
-      <header>
-        <div className={style.author}>
-          <Avatar src={author.avatarUrl} alt="" />
-          <div className={style.authorInfo}>
-            <strong> {author.name}</strong>
-            <span>{author.role}</span>
-          </div>
-        </div>
 
-        <time
-          title={publishedDateFormated}
-          dateTime={publishedAt.toISOString()}
-        >
-          {publishedDateRelativeToNow}
-        </time>
-      </header>
-      <div className={style.content}>
-        {content.map((line) => {
-          if (line.type === "text") {
-            return <p>{line.value}</p>;
-          }
-          if (line.type === "link") {
-            return (
-              <p>
-                <a href=""> {line.value}</a>
-              </p>
-            );
-          }
-        })}
-      </div>
+export function Post(){
+    return (
+    <article  className={style.post}>
+        <header>
+            <div className={style.author}>
+            <img className={style.avatar} src="https://github.com/PedroGuilhermeSilv.png" alt="" />
+            <div  className={style.authorInfo}>
+                <strong> Pedro Guilherme</strong>
+                <span>FullStack Developer</span>
+            </div>
+            </div>
 
-      <form className={style.commentForm}>
-        <strong>Deixe seu feedback</strong>
-        <textarea placeholder="Deixe seu comentário" />
-        <footer>
-          <button type="submit">Publicar</button>
-        </footer>
-      </form>
+            <time dateTime="2024-05-11">Publicado há 1h</time>
 
-      <div className={style.commentList}>
-        <Comment />
-        <Comment />
-        <Comment />
-      </div>
+
+        </header>
+            <div className={style.content}>
+            <p>Fala galera👋</p>
+            <p>Acabi  de subir mais um projeto no meu portifolio</p>
+            <p>👉{' '}<a href="">pedro.fullstack</a></p>
+            <p><a href="">#novoprojeto</a> {' '}
+             <a href="">#novoprojeto</a></p>
+
+            </div>
+
+
+            <form className={style.commentForm}>
+                <strong>Deixe seu feedback</strong>
+                <textarea placeholder='Deixe seu comentário' />
+            <footer>
+                <button type='submit'>Publicar</button>
+
+            </footer>
+            </form>
+
     </article>
-  );
-}
+    )
+};
+

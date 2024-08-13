@@ -16,7 +16,4 @@
 
 ## Css Modules
 - Geralmente trabalhamos o css com base no escopo do componente.
-
-## Css
-Quando se tem display flex e no elemento interno voce coloca flex 1 você deseja que esse elemento ocupe o max possivel de espaço
-#D0020
+#D0012
