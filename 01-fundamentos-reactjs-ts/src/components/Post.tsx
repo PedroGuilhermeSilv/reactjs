@@ -1,11 +1,29 @@
 import style from "./Post.module.css";
-import { Comment } from "./Comment.jsx";
-import { Avatar } from "./Avatar.jsx";
+import { Comment } from "./Comment.js";
+import { Avatar } from "./Avatar.js";
 import { format, formatDistanceToNow, set } from "date-fns";
 import { ptBR } from "date-fns/locale";
-import { useState } from "react";
+import { useState, FormEvent, ChangeEvent, InvalidEvent } from "react";
 
-export function Post({ author, publishedAt, content }) {
+export interface Author{
+  name: string;
+  avatarUrl: string;
+  role: string;
+}
+
+export interface Content{
+  type: 'text' | 'link';
+  value: string;
+}
+
+interface PostProps {
+  author: Author;
+  publishedAt: Date;
+  content: Content[];
+
+}
+
+export function Post({ author, publishedAt, content }: PostProps) {
   const publishedDateFormated = format(
     publishedAt,
     "d 'de' LLLL 'às' HH:mm'h'",
@@ -19,16 +37,16 @@ export function Post({ author, publishedAt, content }) {
   const [comments, setComments] = useState(["Post muito bancana!!!"]);
   const [newComment, setNewComment] = useState("");
 
-  function handleCreateNewComment(event) {
+  function handleCreateNewComment(event: ChangeEvent<HTMLTextAreaElement>) {
     setNewComment(event.target.value);
   }
 
-  function handleCommentSubmit() {
+  function handleCommentSubmit(event: FormEvent) {
     event.preventDefault();
     setComments([...comments, newComment]);
     setNewComment("");
   }
-  function deleteComment(commentToDelete) {
+  function deleteComment(commentToDelete:string) {
     const commentsWithoutDeleted = comments.filter((comment) => {
       return comment !== commentToDelete;
     });
@@ -36,7 +54,7 @@ export function Post({ author, publishedAt, content }) {
     setComments(commentsWithoutDeleted);
   }
 
-  function handleNewCommentInvalid() {
+  function handleNewCommentInvalid(event: InvalidEvent<HTMLTextAreaElement>) {
     event.target.setCustomValidity("O comentário não pode estar vazio");
   }
   return (

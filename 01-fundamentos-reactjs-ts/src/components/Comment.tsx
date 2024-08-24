@@ -3,7 +3,13 @@ import style from "./Comment.module.css";
 import { Avatar } from "./Avatar";
 import { useState } from "react";
 
-export function Comment({ content, onDeleteComment }) {
+interface CommentProps {
+  content: string;
+  onDeleteComment: (comment: string) => void;
+}
+
+
+export function Comment({ content, onDeleteComment }: CommentProps) {
   const [like, setLike] = useState(0);
   function handleDeleteComment() {
     onDeleteComment(content);

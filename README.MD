@@ -30,4 +30,29 @@ Quando se tem display flex e no elemento interno voce coloca flex 1 você deseja
 ## Use state
 
 O estado = variáveis que eu quero que o componente monitore
-#D0022
+
+## Sintaxe:
+
+setComments([...comments, newComment]);: Esta linha está atualizando o estado dos comentários. O operador de espalhamento (...) é usado para criar uma nova matriz que contém todos os comentários existentes (comments) e adiciona o novo comentário (newComment) ao final da matriz.
+
+## Key no React, por que unica?
+
+A três momentos em que um componente é renderizado novamente no React
+
+1. Quando o estado altera;
+2. Quando a propriedade altera;
+3. Quando um componente pai renderiza novamente;
+
+### Por que não utilizar o indice do array?
+
+- Caso você mude apenas a posição do item tudo sera recarregado novamente.
+
+## Como fazer a comunição entre componentes?
+
+- As props dos componentes podem ser passadas entre componentes e nessas props não são somente strings, int mas também funções que podem ser executadas.
+
+## Closures em React
+
+Closures em React referem-se à capacidade de uma função acessar o escopo em que foi criada, mesmo após esse escopo ter sido finalizado. Isso é comum em componentes funcionais, onde funções de callback dentro do componente podem "lembrar" do estado ou variáveis que estavam presentes no momento em que foram criadas. Isso pode causar problemas se a função referenciar valores antigos, não refletindo o estado mais recente. Para evitar esses problemas, pode-se usar funções de atualização que recebem o estado anterior como argumento, garantindo que sempre trabalhem com os dados mais atuais.
+
+#D0027
