@@ -55,4 +55,7 @@ A três momentos em que um componente é renderizado novamente no React
 
 Closures em React referem-se à capacidade de uma função acessar o escopo em que foi criada, mesmo após esse escopo ter sido finalizado. Isso é comum em componentes funcionais, onde funções de callback dentro do componente podem "lembrar" do estado ou variáveis que estavam presentes no momento em que foram criadas. Isso pode causar problemas se a função referenciar valores antigos, não refletindo o estado mais recente. Para evitar esses problemas, pode-se usar funções de atualização que recebem o estado anterior como argumento, garantindo que sempre trabalhem com os dados mais atuais.
 
-#D0027
+## Styled-components
+
+O `styled-components` é uma biblioteca para React que permite escrever estilos CSS diretamente dentro de componentes JavaScript usando a técnica CSS-in-JS. Ele isola os estilos por componente, evitando conflitos globais, e suporta temas para estilização consistente. Além disso, integra bem com editores para autocompletar CSS, suporta renderização no servidor (SSR) e facilita a manutenção e organização do código.
+#D0035
