@@ -1,15 +1,13 @@
-import { ButtonContainer, ButtonVariants } from "./Button.styles";
+import { ButtonContainer, type ButtonVariants } from "./Button.styles";
 
 interface ButtonProps {
-    variants?:  ButtonVariants ;
-
+	variants?: ButtonVariants;
 }
 
-
-export function Button({variants = "primary"}: ButtonProps) {
-  return (
-    <>
-    <ButtonContainer variant={variants}> Test</ButtonContainer>
-    </>
-  );
+export function Button({ variants = "primary" }: ButtonProps) {
+	return (
+		<>
+			<ButtonContainer variant={variants}> Test</ButtonContainer>
+		</>
+	);
 }
