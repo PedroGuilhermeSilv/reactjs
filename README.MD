@@ -62,4 +62,12 @@ O `styled-components` é uma biblioteca para React que permite escrever estilos 
 Quando utlizamos styled-components podemos fazer a mudança de temas de maneira dinamica usando `ThemeProvider` (lembre-se de tipar os themas)
 
 Podemos criar stylos globais usando `createGlobalStyle`
-#D0035
+
+## Context Provider
+
+São elementos que não causam interferencia visual mas são componenetes que criam um contexto para componenetes dentro deles.
+
+## React-router-dom
+
+Usando a tag Outlet podemos definir em qual local iremos injetar o elemento.
+#D0042
