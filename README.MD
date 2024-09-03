@@ -58,4 +58,8 @@ Closures em React referem-se à capacidade de uma função acessar o escopo em q
 ## Styled-components
 
 O `styled-components` é uma biblioteca para React que permite escrever estilos CSS diretamente dentro de componentes JavaScript usando a técnica CSS-in-JS. Ele isola os estilos por componente, evitando conflitos globais, e suporta temas para estilização consistente. Além disso, integra bem com editores para autocompletar CSS, suporta renderização no servidor (SSR) e facilita a manutenção e organização do código.
+
+Quando utlizamos styled-components podemos fazer a mudança de temas de maneira dinamica usando `ThemeProvider` (lembre-se de tipar os themas)
+
+Podemos criar stylos globais usando `createGlobalStyle`
 #D0035
