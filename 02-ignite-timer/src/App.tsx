@@ -10,10 +10,10 @@ import { defaultTheme } from "./styles/theme/default";
 export function App() {
 	return (
 		<ThemeProvider theme={defaultTheme}>
-		<Router>
-			<Routers />
-		</Router>
-		<GlobalStyle />
+			<Router>
+				<Routers />
+			</Router>
+			<GlobalStyle />
 		</ThemeProvider>
 	);
 }

@@ -70,4 +70,4 @@ São elementos que não causam interferencia visual mas são componenetes que cr
 ## React-router-dom
 
 Usando a tag Outlet podemos definir em qual local iremos injetar o elemento.
-#D0042
+#D0044
