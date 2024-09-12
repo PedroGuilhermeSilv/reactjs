@@ -18,6 +18,7 @@ export const HomeContainer = styled.main`
 
 export const FormContainer = styled.div`
 width: 100%;
+min-width: 41.5rem;
 display: flex;
 gap: 1rem;
 align-items: center;
@@ -54,3 +55,59 @@ span{
 
 `;
 
+const inputStyle = styled.input`
+  background: transparent;
+  color: ${(props)=> props.theme["gray-100"]};
+  border: none;
+  border-bottom: 2px solid ${(props)=> props.theme["gray-300"]};
+  
+  font-size: 1.125rem;
+    font-weight: bold;  
+    height: 2.5rem;
+    padding: 0 0.5rem; 
+
+    &::placeholder{
+        color: ${(props)=> props.theme["gray-300"]};
+    }
+    &:focus{
+        border-bottom-color: ${(props)=> props.theme["green-500"]};
+        box-shadow: none;
+    }
+`;
+
+export const TaskInput = styled(inputStyle)`
+flex: 1;
+
+    &::-webkit-calendar-picker-indicator{
+    display: none !important;
+
+}
+`;
+
+export const MinutesInput = styled(inputStyle)`
+width: 4rem;
+`;
+
+export const StartCountdownButton = styled.button`
+background: ${(props)=> props.theme["green-500"]};
+color: ${(props)=> props.theme["gray-100"]};
+border: none;
+padding: 1rem ;
+border-radius: 8px;
+display : flex;
+align-items: center;
+justify-content: center;
+gap: 0.5rem;
+width: 100%;
+cursor: pointer;
+font-weight: bold;
+
+&:disabled{
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+&:not(:disabled):hover{
+    background: ${(props)=> props.theme["green-700"]};
+}
+`;
